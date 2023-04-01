@@ -1,11 +1,19 @@
 import React, { useState } from 'react'
 import Movie from './Movie';
+import {Movies} from "../../Data";
 import { useParams } from 'react-router-dom';
 
 export default function Catalog () {
 
   const {username} = useParams()
-  const userData = JSON.parse(localStorage[username])
+
+  localStorage.setItem('tempUser', JSON.stringify({
+    movies : Movies ,
+    budget : 6
+  }))
+
+  const userData = JSON.parse(localStorage[username] || localStorage['tempUser'])
+
   const [userMovies, setUserMovies] = useState(userData.movies);
   const [searchBar, setSearchBar] = useState("");
   const [budget , setBudget] = useState(userData.budget)

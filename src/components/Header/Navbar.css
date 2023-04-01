@@ -17,11 +17,10 @@
   font-weight: bold;
   font-family: cursive;
 } */
-.navbar {
-  background: pink;
+/* .navbar {
+  background: black;
   display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr; /* only column intially */
+  grid-template-columns: 2fr; 
   grid-auto-flow:dense;
   justify-items: stretch;
   align-items: stretch;
@@ -31,5 +30,35 @@
 .logo {
   background: green;
   width: 60px;
-  grid-column:-3; /* create an implicit one at the beginning */
+  grid-column:-3; 
+  justify-self: left;
+} */
+
+.navBar {
+  background: #272727;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navBar div {
+  position: relative;
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  width: 80px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  left: 20%;
+}
+
+.navBar div:hover {
+  color: #fddb3a;
+}
+
+.navBar .logo{
+  position: relative;
+  color: red;
+  left: 70%;
 }

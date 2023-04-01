@@ -5,13 +5,12 @@ import './Navbar.css'
 export default function Navbar() {
   return (
     <>
-      <nav className="navbar">
-        <Link to="/"> Home </Link>
-        <span>    |    </span>
-        <Link to="/catalog"> Catalog </Link>
-        <div className="logo">
-          Reflix
-        </div>
+      <nav className="navBar">
+        <Link to="/"> <div> Home </div> </Link>
+        <Link to="/catalog"> <div> Catalog </div></Link>
+
+        <div className='logo'> Reflix </div>
+
       </nav>
     </>
   )
