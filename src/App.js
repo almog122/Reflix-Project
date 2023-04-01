@@ -14,9 +14,9 @@ function App() {
 
   return (
     <Router>
-      <div className="navbar">
+      <>
         <Navbar />
-      </div>
+      </>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/catalog/:username" element={<Catalog />} />

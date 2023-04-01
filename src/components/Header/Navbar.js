@@ -9,10 +9,10 @@ export default function Navbar() {
         <Link to="/"> Home </Link>
         <span>    |    </span>
         <Link to="/catalog"> Catalog </Link>
+        <div className="logo">
+          Reflix
+        </div>
       </nav>
-      <span className="logo">
-        <span>Reflix</span>
-      </span>
     </>
   )
 }

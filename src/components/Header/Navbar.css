@@ -17,3 +17,19 @@
   font-weight: bold;
   font-family: cursive;
 } */
+.navbar {
+  background: pink;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr; /* only column intially */
+  grid-auto-flow:dense;
+  justify-items: stretch;
+  align-items: stretch;
+  column-gap: 20px;
+}
+
+.logo {
+  background: green;
+  width: 60px;
+  grid-column:-3; /* create an implicit one at the beginning */
+}
