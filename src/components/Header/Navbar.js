@@ -7,7 +7,7 @@ export default function Navbar() {
     <>
       <nav className="navBar">
         <Link to="/"> <div> Home </div> </Link>
-        <Link to="/catalog"> <div> Catalog </div></Link>
+        <Link to={`/catalog/${localStorage['currentUser']}`}> <div> Catalog </div></Link>
 
         <div className='logo'> Reflix </div>
 

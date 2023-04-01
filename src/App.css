@@ -1,4 +1,6 @@
-
+body{
+  background-color: black;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -8,10 +10,5 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-img{
-  width: 20%;
-  height: 20%;
 }
 

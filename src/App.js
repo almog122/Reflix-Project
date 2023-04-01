@@ -19,7 +19,6 @@ function App() {
       </>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/catalog" element={<Catalog />} />
         <Route path="/catalog/:username" element={<Catalog />} />
         <Route path="/movies/:id" element={<MovieDetail getMovie={getMovie}/>} />
       </Routes>

@@ -1,0 +1,31 @@
+.movie{
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 60px;
+}
+
+.moviePic{
+    width: 60%;
+    height: 60%;
+}
+
+.rentMovieBtn{
+    position: absolute;
+    top: 5%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 10px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.rentMovieBtn:hover {
+    background-color: green;
+  }

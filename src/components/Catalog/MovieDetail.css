@@ -1,0 +1,21 @@
+.movieDetail{
+    color:aliceblue;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.moviePic{
+    width: 50%;
+    height: 50%;
+}
+
+.movieTitle{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.movieDesc{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    margin-top: 20px;
+}

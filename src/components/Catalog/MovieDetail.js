@@ -1,5 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import './MovieDetail.css'
 
 export default function MovieDetail({getMovie}) {
 
@@ -8,10 +9,10 @@ export default function MovieDetail({getMovie}) {
   const movie = getMovie(parseInt(id))
 
   return (
-    <div>
-      <h1>{movie.title} {movie.year}</h1>
-      <img src={movie.img} alt='' />
-      <div>{movie.descrShort}</div>
+    <div className='movieDetail'>
+      <h1 className='movieTitle'>{movie.title} ({movie.year})</h1>
+      <img className='moviePic' src={movie.img} alt='' />
+      <div className='movieDesc'>{movie.descrShort}</div>
     </div>
   )
 }

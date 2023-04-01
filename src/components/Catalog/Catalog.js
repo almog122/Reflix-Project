@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Movie from './Movie';
 import {Movies} from "../../Data";
 import { useParams } from 'react-router-dom';
+import './Catalog.css'
 
 export default function Catalog () {
 
@@ -59,20 +60,20 @@ export default function Catalog () {
   return (
     <div className='catalog'>
 
-      <div>Welcome {username}</div>
+      <h1 className='username'>Welcome {username}</h1>
 
-      <input id="search-input" onChange={UpdateSearchBar} value={searchBar} />
+      <input className="searchInput" placeholder='Search' onChange={UpdateSearchBar} value={searchBar} />
 
-      <div>Budget: {budget}</div>
+      <div className='budget'>Budget: {budget}</div>
 
       {(isRentedMovies(userMovies) ?
       <>
-        <div> Rented : </div>
+        <h1> Rented : </h1>
         <div> {userMovies.map(movie => movie.isRented && filterMovieTitle(movie.title) ? <Movie movie={movie} rentMovie={rentMovie} key={movie.id} /> : <></>)} </div>
       </>
       : <></>)}
 
-      <div> Catalog :</div>
+      <h1> Catalog :</h1>
       <div>
         {userMovies.map(movie => !movie.isRented && filterMovieTitle(movie.title) ? <Movie movie={movie} rentMovie={rentMovie} key={movie.id} />  : <> </>)}
       </div>

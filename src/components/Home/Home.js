@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Users , Movies} from "../../Data";
 import User from './User';
+import './Home.css'
 
 export default function Home(){
 
@@ -16,6 +17,8 @@ export default function Home(){
         budget : 6
       }))
     }
+
+    localStorage.setItem('currentUser' , user.name)
   }
 
   return (
