@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import ReflixLogo from './ReflixLogo';
 import './Navbar.css'
 
 export default function Navbar() {
@@ -11,7 +10,9 @@ export default function Navbar() {
         <span>    |    </span>
         <Link to="/catalog"> Catalog </Link>
       </nav>
-      <ReflixLogo />
+      <span className="logo">
+        <span>Reflix</span>
+      </span>
     </>
   )
 }
