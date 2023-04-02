@@ -4,7 +4,6 @@ import MovieDetail from "./components/Catalog/MovieDetail";
 import Navbar from "./components/Header/Navbar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home";
-import { Movies } from "./Data";
 import { useState } from "react";
 
 function App() {
@@ -14,20 +13,15 @@ function App() {
     setCurrentUser(username)
   }
 
-  const getMovie = function(movieID){
-    return Movies.find(m => m.id === movieID)
-  }
-
-  return (
-    
+  return ( 
     <Router>
       <>
         <Navbar currentUser={currentUser}/>
       </>
       <Routes>
         <Route path="/" element={<Home setUsername={setUsername}/>} />
-        <Route path="/catalog/:username" element={<Catalog />} />
-        <Route path="/movies/:id" element={<MovieDetail getMovie={getMovie}/>} />
+        <Route path={`/catalog/:${currentUser}`} element={<Catalog />} />
+        <Route path="/movies/:id" element={<MovieDetail/>} />
       </Routes>
     </Router>
   );

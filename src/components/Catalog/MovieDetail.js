@@ -1,12 +1,13 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import { Movies } from "../../Data";
 import './MovieDetail.css'
 
-export default function MovieDetail({getMovie}) {
+export default function MovieDetail() {
 
   const {id} = useParams()
 
-  const movie = getMovie(parseInt(id))
+  const movie = Movies.find(m => m.id === parseInt(id))
 
   return (
     <div className='movieDetail'>
