@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Users , Movies} from "../../Data";
+import { Constants} from "../../Constants";
 import User from './User';
 import './Home.css'
 
@@ -14,7 +15,7 @@ export default function Home(){
     if(localStorage[user.name] === undefined){
       localStorage.setItem(user.name, JSON.stringify({
         movies : Movies ,
-        budget : 6
+        budget : Constants.STARTING_BUDGET
       }))
     }
 

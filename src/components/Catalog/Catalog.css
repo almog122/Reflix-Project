@@ -26,3 +26,8 @@
 .budget{
     font-size: 60px;
 }
+
+.movies-container{
+  display: grid;
+  grid-template-columns: repeat(3 , 2fr);
+}

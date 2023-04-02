@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Movie from './Movie';
 import {Movies} from "../../Data";
+import { Constants} from "../../Constants";
 import { useParams } from 'react-router-dom';
 import './Catalog.css'
 
@@ -10,7 +11,7 @@ export default function Catalog () {
 
   localStorage.setItem('tempUser', JSON.stringify({
     movies : Movies ,
-    budget : 6
+    budget : Constants.STARTING_BUDGET
   }))
 
   const userData = JSON.parse(localStorage[username] || localStorage['tempUser'])
@@ -69,12 +70,14 @@ export default function Catalog () {
       {(isRentedMovies(userMovies) ?
       <>
         <h1> Rented : </h1>
-        <div> {userMovies.map(movie => movie.isRented && filterMovieTitle(movie.title) ? <Movie movie={movie} rentMovie={rentMovie} key={movie.id} /> : <></>)} </div>
+        <div className='movies-container'>
+          {userMovies.map(movie => movie.isRented && filterMovieTitle(movie.title) ? <Movie movie={movie} rentMovie={rentMovie} key={movie.id} /> : <></>)} 
+        </div>
       </>
       : <></>)}
 
       <h1> Catalog :</h1>
-      <div>
+      <div className='movies-container'>
         {userMovies.map(movie => !movie.isRented && filterMovieTitle(movie.title) ? <Movie movie={movie} rentMovie={rentMovie} key={movie.id} />  : <> </>)}
       </div>
     </div>
