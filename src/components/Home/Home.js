@@ -4,13 +4,13 @@ import { Constants} from "../../Constants";
 import User from './User';
 import './Home.css'
 
-export default function Home(){
+export default function Home({setUsername}){
 
-  const [usersData, setUsersData] = useState({ users: Users, currentUser: "" });
+  const [usersData, setUsersData] = useState({ users: Users});
 
   const loginUser = function(userID){
     let user = usersData.users.find( user => user.id === userID);
-    setUsersData({...usersData, currentUser: user.name})
+    setUsersData({...usersData})
     
     if(localStorage[user.name] === undefined){
       localStorage.setItem(user.name, JSON.stringify({
@@ -19,7 +19,7 @@ export default function Home(){
       }))
     }
 
-    localStorage.setItem('currentUser' , user.name)
+    setUsername(user.name)
   }
 
   return (
